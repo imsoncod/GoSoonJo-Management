@@ -22,8 +22,8 @@ public class MailListener {
      public static Logger log = Logger.getLogger(MailListener.class);
    
      private final String host = "smtp.naver.com";
-     private final String user = "mc_memory@naver.com";
-     private final String password = "dhsfkdls0129";
+     private final String user = "Email";
+     private final String password = "Password";
      
      private boolean Check = false;
      private int size;
@@ -80,21 +80,21 @@ public class MailListener {
          message.setFrom(new InternetAddress(user));
          message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
-         message.setSubject("°í¼øÁ¶ ÇÁ·ÎÁ§Æ®");
+         message.setSubject("ê³ ìˆœì¡° í”„ë¡œì íŠ¸");
          
-         message.setText("ÀÎÁõ¹øÈ£ : " + Key);
+         message.setText("ì¸ì¦ë²ˆí˜¸ : " + Key);
 
          Transport.send(message);
          log.info("PIN : " + Key);
          log.info("Your PIN number has been emailed.");
-         new Frame_MessageBox("¸Ş¼¼Áö", "ÀÎÁõ¹øÈ£°¡ Àü¼ÛµÇ¾ú½À´Ï´Ù!");
+         new Frame_MessageBox("ë©”ì„¸ì§€", "ì¸ì¦ë²ˆí˜¸ê°€ ì „ì†¡ë˜ì—ˆìŠµë‹ˆë‹¤!");
          
         } catch (AddressException e) {
-           new Frame_MessageBox("¿À·ù¹ß»ı", "ÀÌ¸ŞÀÏÀ» ÀÛ¼ºÇØÁÖ¼¼¿ä!");
+           new Frame_MessageBox("ì˜¤ë¥˜ë°œìƒ", "ì´ë©”ì¼ì„ ì‘ì„±í•´ì£¼ì„¸ìš”!");
            log.error("Please fill out the e-mail.");
            return;
         } catch (SendFailedException e) {
-           new Frame_MessageBox("¿À·ù¹ß»ı", "ÀÌ¸ŞÀÏ Çü½Ä¿¡ ¸Â°Ô ÀÛ¼ºÇØÁÖ¼¼¿ä");
+           new Frame_MessageBox("ì˜¤ë¥˜ë°œìƒ", "ì´ë©”ì¼ í˜•ì‹ì— ë§ê²Œ ì‘ì„±í•´ì£¼ì„¸ìš”");
            log.error("Please fill out the e-mail format.");
            return;
         } catch (MessagingException e) {
@@ -119,21 +119,21 @@ public class MailListener {
          message.setFrom(new InternetAddress(user));
          message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
-         message.setSubject("°í¼øÁ¶ ÇÁ·ÎÁ§Æ®");
+         message.setSubject("ê³ ìˆœì¡° í”„ë¡œì íŠ¸");
          
-         message.setText("ºñ¹Ğ¹øÈ£ : " + pw);
+         message.setText("ë¹„ë°€ë²ˆí˜¸ : " + pw);
 
          Transport.send(message);
          log.info("Your PassWord number has been emailed.");
-         new Frame_MessageBox("¸Ş¼¼Áö", "ºñ¹Ğ¹øÈ£°¡ Àü¼ÛµÇ¾ú½À´Ï´Ù!");
+         new Frame_MessageBox("ë©”ì„¸ì§€", "ë¹„ë°€ë²ˆí˜¸ê°€ ì „ì†¡ë˜ì—ˆìŠµë‹ˆë‹¤!");
          
 
         } catch (AddressException e) {
-           new Frame_MessageBox("¿À·ù¹ß»ı", "ÀÌ¸ŞÀÏÀ» ÀÛ¼ºÇØÁÖ¼¼¿ä!");
+           new Frame_MessageBox("ì˜¤ë¥˜ë°œìƒ", "ì´ë©”ì¼ì„ ì‘ì„±í•´ì£¼ì„¸ìš”!");
            log.error("Please fill out the e-mail.");
            return;
         } catch (SendFailedException e) {
-           new Frame_MessageBox("¿À·ù¹ß»ı", "ÀÌ¸ŞÀÏ Çü½Ä¿¡ ¸Â°Ô ÀÛ¼ºÇØÁÖ¼¼¿ä");
+           new Frame_MessageBox("ì˜¤ë¥˜ë°œìƒ", "ì´ë©”ì¼ í˜•ì‹ì— ë§ê²Œ ì‘ì„±í•´ì£¼ì„¸ìš”");
            log.error("Please fill out the e-mail format.");
            return;
         } catch (MessagingException e) {
