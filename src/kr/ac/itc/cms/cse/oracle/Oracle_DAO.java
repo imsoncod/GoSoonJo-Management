@@ -19,7 +19,7 @@ public class Oracle_DAO {
 
 	final private String commit = "COMMIT";
 	final private String driver = "oracle.jdbc.driver.OracleDriver";
-	final private String url = "jdbc:oracle:thin:@183.91.253.86:1521:xe";
+	final private String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	final private String user = "project";
 	final private String password = "root";
 
@@ -86,7 +86,7 @@ public class Oracle_DAO {
 			rs = stmt.executeQuery(sql);
 
 			if (rs == null) {
-				System.out.println(time + "·¹ÄÚµå°¡ ¾ø½À´Ï´Ù.");
+				System.out.println(time + "ë ˆì½”ë“œê°€ ì—†ìŠµë‹ˆë‹¤.");
 			} else {
 				if (rs.next() == true) {
 					num = rs.getInt(1);
@@ -778,7 +778,7 @@ public class Oracle_DAO {
 		try {
 			con = DriverManager.getConnection(url, user, password);
 			stmt = con.createStatement();
-			sql = "select sum(worktime) ÃÑ½Ã°£ from workcalendar where userid = '" + id + "'and + workyear ='" + year
+			sql = "select sum(worktime) ì´ì‹œê°„ from workcalendar where userid = '" + id + "'and + workyear ='" + year
 					+ "'and workmonth ='" + month + "'";
 			rs = stmt.executeQuery(sql);
 			while (rs.next()) {
