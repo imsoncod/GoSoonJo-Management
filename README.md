@@ -73,7 +73,7 @@
   * #### Register relationship between employer and employee
   * #### Chat with people in stores
   * #### Separation of Employer and Employee Authority
-## Development screen (Detailed operation screen is omitted)
+## Development screen (Omit detailed action screen)
 * #### New Account screen
      ![image](https://user-images.githubusercontent.com/48934537/71766435-614d6d80-2f43-11ea-9fe6-23a5851e7231.png)
 * #### Login screen
