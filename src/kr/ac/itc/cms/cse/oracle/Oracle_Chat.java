@@ -17,7 +17,7 @@ import kr.ac.itc.cms.cse.frame.Frame_UserList;
 public class Oracle_Chat {
 
 	final private String commit = "COMMIT";
-	final private String url = "jdbc:oracle:thin:@183.91.253.86:1521:xe";
+	final private String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	final private String user = "project";
 	final private String password = "root";
 
@@ -41,7 +41,7 @@ public class Oracle_Chat {
 			rs = stmt.executeQuery(sql);
 
 			if (rs.next() == false) {
-				new Frame_MessageBox("¸Ş½ÃÁö", "Á¸ÀçÇÏÁö ¾Ê´Â ¾ÆÀÌµğÀÔ´Ï´Ù.");
+				new Frame_MessageBox("ë©”ì‹œì§€", "ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ì•„ì´ë””ì…ë‹ˆë‹¤.");
 				return;
 			} else {
 				sql = "select * from userinfo where userid = '" + id + "'";
@@ -63,7 +63,7 @@ public class Oracle_Chat {
 		}
 	}
 
-	// ²¯´Ù ÄÖÀ»¶§ µğºñ°ª ºÒ·¯¿Í¼­ Ä£±¸¸ñ·Ï »ı¼º
+	// ê»ë‹¤ ì¼¯ì„ë•Œ ë””ë¹„ê°’ ë¶ˆëŸ¬ì™€ì„œ ì¹œêµ¬ëª©ë¡ ìƒì„±
 	public void OracleUserList(String id, int check) {
 		try {
 			ArrayList<String> list = new ArrayList<String>();
@@ -260,13 +260,13 @@ public class Oracle_Chat {
 			rs = stmt.executeQuery(sql);
 
 			if (rs.next() == true) {
-				new Frame_MessageBox("¸Ş¼¼Áö", "       ÀÌ¹Ì ÃÊ´ëÇÏ¼Ì½À´Ï´Ù!         ");
+				new Frame_MessageBox("ë©”ì„¸ì§€", "       ì´ë¯¸ ì´ˆëŒ€í•˜ì…¨ìŠµë‹ˆë‹¤!         ");
 			} else {
-				sql = "insert into chatlist values(" + (num + 1) + ", '" + name + "', '" + id + "', '183.91.253.86', '" + chatname + "', " + port + ", '" + "¡Û" + "')";
+				sql = "insert into chatlist values(" + (num + 1) + ", '" + name + "', '" + id + "', '183.91.253.86', '" + chatname + "', " + port + ", '" + "â—‹" + "')";
 				stmt = con.createStatement();
 				rs = stmt.executeQuery(sql);
 				rs = stmt.executeQuery(commit);
-				new Frame_MessageBox("¸Ş¼¼Áö", "            ÃÊ´ëÇß½À´Ï´Ù.             ");
+				new Frame_MessageBox("ë©”ì„¸ì§€", "            ì´ˆëŒ€í–ˆìŠµë‹ˆë‹¤.             ");
 			} 
 
 		} catch (Exception e) {
@@ -299,9 +299,9 @@ public class Oracle_Chat {
 			rs = stmt.executeQuery(sql);
 
 			if (rs.next() == true) {
-				new Frame_MessageBox("¸Ş¼¼Áö", "ÀÌ¹Ì Ä£±¸¸ñ·Ï¿¡ Á¸Àç ÇÕ´Ï´Ù! ");
+				new Frame_MessageBox("ë©”ì„¸ì§€", "ì´ë¯¸ ì¹œêµ¬ëª©ë¡ì— ì¡´ì¬ í•©ë‹ˆë‹¤! ");
 			} else {
-				new Frame_MessageBox("¸Ş¼¼Áö", "       Ä£±¸ Ãß°¡ ¿Ï·á!       ");
+				new Frame_MessageBox("ë©”ì„¸ì§€", "       ì¹œêµ¬ ì¶”ê°€ ì™„ë£Œ!       ");
 				sql = "insert into userlist values(" + (num + 1) + ",'" + id + "', '" + list + "')";
 				stmt = con.createStatement();
 				rs = stmt.executeQuery(sql);
