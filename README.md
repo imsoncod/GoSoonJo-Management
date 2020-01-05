@@ -8,7 +8,11 @@
 ## Development period
 #### About 4 weeks
 ## Language used
-#### Only Java
+* #### Java
+* #### SQL
+## Development tools
+* #### Eclipse
+* #### sqldeveloper
 ## Project configuration
 * #### client
   * Client_Main.java
