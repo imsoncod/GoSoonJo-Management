@@ -4,7 +4,7 @@
 ## Company Logo
   ![image](https://user-images.githubusercontent.com/48934537/71766365-ab821f00-2f42-11ea-9977-1fc6fb23a800.png)
 ## Developer
-#### imsoncod, CJH
+#### imsoncod, [Raison-CJH](https://github.com/Raison-CJH)
 ## Development period
 #### About 4 weeks
 ## Language used
